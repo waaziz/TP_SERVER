@@ -14,6 +14,11 @@ let tasks = [
   { id: 2, title: 'Build a React App', completed: false }
 ];
 
+// Root route for health check
+app.get('/', (req, res) => {
+  res.json({ message: 'API opérationnelle' });
+});
+
 // Get all tasks
 app.get('/api/tasks', (req, res) => {
   res.json(tasks);
